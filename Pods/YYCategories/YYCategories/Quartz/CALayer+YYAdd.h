@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Take snapshot without transform, image's size equals to bounds.
+ 截取layer为image快照
  */
 - (nullable UIImage *)snapshotImage;
 

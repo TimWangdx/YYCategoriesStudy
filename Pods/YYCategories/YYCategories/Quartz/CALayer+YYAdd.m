@@ -19,10 +19,15 @@ YYSYNTH_DUMMY_CLASS(CALayer_YYAdd)
 @implementation CALayer (YYAdd)
 
 - (UIImage *)snapshotImage {
+    // 创建绘图的上下文
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
+    // 获取context
     CGContextRef context = UIGraphicsGetCurrentContext();
+    // layer 绘制到上下文
     [self renderInContext:context];
+    // 得到图片
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    // 关闭上下文
     UIGraphicsEndImageContext();
     return image;
 }

@@ -16,6 +16,11 @@
 		26BC72101E12B77E00013F58 /* YYCategoriesStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BC720F1E12B77E00013F58 /* YYCategoriesStudyTests.m */; };
 		26BC721B1E12B77E00013F58 /* YYCategoriesStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BC721A1E12B77E00013F58 /* YYCategoriesStudyUITests.m */; };
 		3B87AA58B79A9822124402D4 /* libPods-YYCategoriesStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C49B89862DEFEF62088F19FB /* libPods-YYCategoriesStudy.a */; };
+		EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9802181E13BCB50042D48E /* TWOptionModel.m */; };
+		EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98021C1E13BD8A0042D48E /* TWTestViewCell.m */; };
+		EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */; };
+		EB9802241E13C2110042D48E /* TWCALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9802221E13C2110042D48E /* TWCALayerViewController.m */; };
+		EB9802251E13C2110042D48E /* TWCALayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9802231E13C2110042D48E /* TWCALayerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,14 @@
 		5CDA4050AE3561EBDC0AE540 /* Pods-YYCategoriesStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYCategoriesStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYCategoriesStudy/Pods-YYCategoriesStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		70BCA084BBA3EA02DA8B0245 /* Pods-YYCategoriesStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYCategoriesStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYCategoriesStudy/Pods-YYCategoriesStudy.release.xcconfig"; sourceTree = "<group>"; };
 		C49B89862DEFEF62088F19FB /* libPods-YYCategoriesStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYCategoriesStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9802171E13BCB50042D48E /* TWOptionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOptionModel.h; sourceTree = "<group>"; };
+		EB9802181E13BCB50042D48E /* TWOptionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOptionModel.m; sourceTree = "<group>"; };
+		EB98021B1E13BD8A0042D48E /* TWTestViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTestViewCell.h; sourceTree = "<group>"; };
+		EB98021C1E13BD8A0042D48E /* TWTestViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTestViewCell.m; sourceTree = "<group>"; };
+		EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWTestViewCell.xib; sourceTree = "<group>"; };
+		EB9802211E13C2110042D48E /* TWCALayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCALayerViewController.h; sourceTree = "<group>"; };
+		EB9802221E13C2110042D48E /* TWCALayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCALayerViewController.m; sourceTree = "<group>"; };
+		EB9802231E13C2110042D48E /* TWCALayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCALayerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 		26BC71F41E12B77E00013F58 /* YYCategoriesStudy */ = {
 			isa = PBXGroup;
 			children = (
+				EB98021A1E13BCBF0042D48E /* Test Classes */,
 				26BC71F81E12B77E00013F58 /* AppDelegate.h */,
 				26BC71F91E12B77E00013F58 /* AppDelegate.m */,
 				26BC71FB1E12B77E00013F58 /* ViewController.h */,
@@ -162,6 +176,29 @@
 				C49B89862DEFEF62088F19FB /* libPods-YYCategoriesStudy.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB98021A1E13BCBF0042D48E /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB9802201E13C1D10042D48E /* Home */,
+				EB9802211E13C2110042D48E /* TWCALayerViewController.h */,
+				EB9802221E13C2110042D48E /* TWCALayerViewController.m */,
+				EB9802231E13C2110042D48E /* TWCALayerViewController.xib */,
+			);
+			name = "Test Classes";
+			sourceTree = "<group>";
+		};
+		EB9802201E13C1D10042D48E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB9802171E13BCB50042D48E /* TWOptionModel.h */,
+				EB9802181E13BCB50042D48E /* TWOptionModel.m */,
+				EB98021B1E13BD8A0042D48E /* TWTestViewCell.h */,
+				EB98021C1E13BD8A0042D48E /* TWTestViewCell.m */,
+				EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +271,7 @@
 				TargetAttributes = {
 					26BC71F11E12B77E00013F58 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UAP8KFZYXB;
+						DevelopmentTeam = W398QN8ZGP;
 						ProvisioningStyle = Automatic;
 					};
 					26BC720A1E12B77E00013F58 = {
@@ -277,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BC72051E12B77E00013F58 /* LaunchScreen.storyboard in Resources */,
+				EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */,
+				EB9802251E13C2110042D48E /* TWCALayerViewController.xib in Resources */,
 				26BC72021E12B77E00013F58 /* Assets.xcassets in Resources */,
 				26BC72001E12B77E00013F58 /* Main.storyboard in Resources */,
 			);
@@ -352,8 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BC71FD1E12B77E00013F58 /* ViewController.m in Sources */,
+				EB9802241E13C2110042D48E /* TWCALayerViewController.m in Sources */,
 				26BC71FA1E12B77E00013F58 /* AppDelegate.m in Sources */,
 				26BC71F71E12B77E00013F58 /* main.m in Sources */,
+				EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */,
+				EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,10 +545,10 @@
 			baseConfigurationReference = 5CDA4050AE3561EBDC0AE540 /* Pods-YYCategoriesStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UAP8KFZYXB;
+				DEVELOPMENT_TEAM = W398QN8ZGP;
 				INFOPLIST_FILE = YYCategoriesStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qq-906819823.YYCategoriesStudy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hakim.com.qq-906819823.YYCategoriesStudy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -516,10 +558,10 @@
 			baseConfigurationReference = 70BCA084BBA3EA02DA8B0245 /* Pods-YYCategoriesStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UAP8KFZYXB;
+				DEVELOPMENT_TEAM = W398QN8ZGP;
 				INFOPLIST_FILE = YYCategoriesStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qq-906819823.YYCategoriesStudy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hakim.com.qq-906819823.YYCategoriesStudy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -593,6 +635,7 @@
 				26BC72211E12B77E00013F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BC72221E12B77E00013F58 /* Build configuration list for PBXNativeTarget "YYCategoriesStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +644,7 @@
 				26BC72241E12B77E00013F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BC72251E12B77E00013F58 /* Build configuration list for PBXNativeTarget "YYCategoriesStudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +653,7 @@
 				26BC72271E12B77E00013F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

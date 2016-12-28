@@ -36,6 +36,7 @@ YYSYNTH_DUMMY_CLASS(CALayer_YYAdd)
     CGRect bounds = self.bounds;
     NSMutableData* data = [NSMutableData data];
     CGDataConsumerRef consumer = CGDataConsumerCreateWithCFData((__bridge CFMutableDataRef)data);
+    // 开启pdf 的context
     CGContextRef context = CGPDFContextCreate(consumer, &bounds, NULL);
     CGDataConsumerRelease(consumer);
     if (!context) return nil;

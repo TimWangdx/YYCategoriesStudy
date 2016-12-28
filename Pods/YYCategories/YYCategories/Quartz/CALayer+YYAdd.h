@@ -21,12 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Take snapshot without transform, image's size equals to bounds.
- 截取layer为image快照
+ 截取layer为image快照，不做形变，原始的样子
  */
 - (nullable UIImage *)snapshotImage;
 
 /**
  Take snapshot without transform, PDF's page size equals to bounds.
+ 截取layer为pdf快照，不做形变，原始的样子
  */
 - (nullable NSData *)snapshotPDF;
 

@@ -12,6 +12,8 @@
 
 @interface TWCALayerViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *shadowLayer;
+
 @end
 
 @implementation TWCALayerViewController
@@ -34,6 +36,10 @@
 
 - (void)runCase{
     [self testCase1];
+    
+    [self testCase2];
+    
+    [self testCase3];
 }
 
 - (void)testCase1{
@@ -42,6 +48,16 @@
     
     NSData *imagedata=UIImagePNGRepresentation(image);
     [imagedata writeToFile:@"/Users/hikim/Desktop/testCase1.png" atomically:YES];
+}
+
+- (void)testCase2{
+    NSData *pdf = [self.view.layer snapshotPDF];
+    NSLog(@"image = %@",pdf);
+    [pdf writeToFile:@"/Users/hikim/Desktop/testCase2.pdf" atomically:YES];
+}
+
+- (void)testCase3{
+    [self.shadowLayer setLayerShadow:[UIColor blackColor] offset:CGSizeZero radius:2];
 }
 
 

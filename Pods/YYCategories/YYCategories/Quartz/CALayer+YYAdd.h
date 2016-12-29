@@ -42,9 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Remove all sublayers.
+ 移除所有的layer的子layers
  */
 - (void)removeAllSublayers;
 
+// layer 的x，y,width,height
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
 @property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
@@ -57,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) CGPoint origin;      ///< Shortcut for frame.origin.
 @property (nonatomic, getter=frameSize, setter=setFrameSize:) CGSize  size; ///< Shortcut for frame.size.
 
-
+// 对tranform的一些属性的快速获取属性
 @property (nonatomic) CGFloat transformRotation;     ///< key path "tranform.rotation"
 @property (nonatomic) CGFloat transformRotationX;    ///< key path "tranform.rotation.x"
 @property (nonatomic) CGFloat transformRotationY;    ///< key path "tranform.rotation.y"
@@ -73,6 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Shortcut for transform.m34, -1/1000 is a good value.
  It should be set before other transform shortcut.
+ 做出3D效果的，近大远小
  */
 @property (nonatomic) CGFloat transformDepth;
 
@@ -83,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Add a fade animation to layer's contents when the contents is changed.
- 
+ 给layer添加一个淡入淡出的动画
  @param duration Animation duration
  @param curve    Animation curve.
  */
@@ -91,6 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Cancel fade animation which is added with "-addFadeAnimationWithDuration:curve:".
+ 移除上一个方法添加的淡入淡出的动画
  */
 - (void)removePreviousFadeAnimation;
 

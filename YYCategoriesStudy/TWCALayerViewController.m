@@ -40,6 +40,8 @@
     [self testCase2];
     
     [self testCase3];
+    
+    [self testCase4];
 }
 
 - (void)testCase1{
@@ -58,6 +60,11 @@
 
 - (void)testCase3{
     [self.shadowLayer setLayerShadow:[UIColor blackColor] offset:CGSizeZero radius:2];
+}
+
+- (void)testCase4{
+    self.shadowLayer.backgroundColor = [UIColor redColor];
+    [self.shadowLayer.layer addFadeAnimationWithDuration:2 curve:UIViewAnimationCurveEaseInOut];
 }
 
 

@@ -81,7 +81,12 @@
         model1.title = @"CALayer 测试";
         model1.className = @"TWCALayerViewController";
         
-        _options = @[model1];
+        TWOptionModel *model2 = [[TWOptionModel alloc] init];
+        model2.title = @"NSData 测试 - hash，加解密，编码";
+        model2.className = @"TWNSDataViewController";
+        
+        
+        _options = @[model1,model2];
     }
     return _options;
 }

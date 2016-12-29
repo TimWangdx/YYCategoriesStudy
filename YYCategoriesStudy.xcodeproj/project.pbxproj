@@ -21,6 +21,9 @@
 		EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */; };
 		EB9802241E13C2110042D48E /* TWCALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9802221E13C2110042D48E /* TWCALayerViewController.m */; };
 		EB9802251E13C2110042D48E /* TWCALayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9802231E13C2110042D48E /* TWCALayerViewController.xib */; };
+		EBABE8901E14DA8B00B4C568 /* TWNSDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABE88E1E14DA8B00B4C568 /* TWNSDataViewController.m */; };
+		EBABE8911E14DA8B00B4C568 /* TWNSDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBABE88F1E14DA8B00B4C568 /* TWNSDataViewController.xib */; };
+		EBABE8941E14DBFA00B4C568 /* TWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABE8931E14DBFA00B4C568 /* TWBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,11 @@
 		EB9802211E13C2110042D48E /* TWCALayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCALayerViewController.h; sourceTree = "<group>"; };
 		EB9802221E13C2110042D48E /* TWCALayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCALayerViewController.m; sourceTree = "<group>"; };
 		EB9802231E13C2110042D48E /* TWCALayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWCALayerViewController.xib; sourceTree = "<group>"; };
+		EBABE88D1E14DA8B00B4C568 /* TWNSDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWNSDataViewController.h; sourceTree = "<group>"; };
+		EBABE88E1E14DA8B00B4C568 /* TWNSDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWNSDataViewController.m; sourceTree = "<group>"; };
+		EBABE88F1E14DA8B00B4C568 /* TWNSDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWNSDataViewController.xib; sourceTree = "<group>"; };
+		EBABE8921E14DBFA00B4C568 /* TWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBaseViewController.h; sourceTree = "<group>"; };
+		EBABE8931E14DBFA00B4C568 /* TWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,11 @@
 				EB9802211E13C2110042D48E /* TWCALayerViewController.h */,
 				EB9802221E13C2110042D48E /* TWCALayerViewController.m */,
 				EB9802231E13C2110042D48E /* TWCALayerViewController.xib */,
+				EBABE88D1E14DA8B00B4C568 /* TWNSDataViewController.h */,
+				EBABE88E1E14DA8B00B4C568 /* TWNSDataViewController.m */,
+				EBABE88F1E14DA8B00B4C568 /* TWNSDataViewController.xib */,
+				EBABE8921E14DBFA00B4C568 /* TWBaseViewController.h */,
+				EBABE8931E14DBFA00B4C568 /* TWBaseViewController.m */,
 			);
 			name = "Test Classes";
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 			files = (
 				26BC72051E12B77E00013F58 /* LaunchScreen.storyboard in Resources */,
 				EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */,
+				EBABE8911E14DA8B00B4C568 /* TWNSDataViewController.xib in Resources */,
 				EB9802251E13C2110042D48E /* TWCALayerViewController.xib in Resources */,
 				26BC72021E12B77E00013F58 /* Assets.xcassets in Resources */,
 				26BC72001E12B77E00013F58 /* Main.storyboard in Resources */,
@@ -395,6 +409,8 @@
 				26BC71FA1E12B77E00013F58 /* AppDelegate.m in Sources */,
 				26BC71F71E12B77E00013F58 /* main.m in Sources */,
 				EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */,
+				EBABE8901E14DA8B00B4C568 /* TWNSDataViewController.m in Sources */,
+				EBABE8941E14DBFA00B4C568 /* TWBaseViewController.m in Sources */,
 				EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

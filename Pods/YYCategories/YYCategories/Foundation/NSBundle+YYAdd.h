@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  An array of NSNumber objects, shows the best order for path scale search.
  e.g. iPhone3GS:@[@1,@2,@3] iPhone5:@[@2,@3,@1]  iPhone6 Plus:@[@3,@2,@1]
+ 返回最合适的图片资源，@1x,@2x,@3x
  */
 + (NSArray<NSNumber *> *)preferredScales;
 
@@ -32,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  name and extension and residing in a given bundle directory. It first search
  the file with current screen's scale (such as @2x), then search from higher
  scale to lower scale.
- 
+ 获取资源的全路径
  @param name       The name of a resource file contained in the directory 
  specified by bundlePath.
  
@@ -55,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the full pathname for the resource identified by the specified name and 
  file extension. It first search the file with current screen's scale (such as @2x),
  then search from higher scale to lower scale.
- 
+ 获取资源的全路径
  @param name       The name of the resource file. If name is an empty string or 
  nil, returns the first file encountered of the supplied type.
  

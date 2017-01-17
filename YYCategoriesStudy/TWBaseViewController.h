@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YYCategories.h"
+#import "TWOptionModel.h"
 
 @class TWOptionModel;
 @interface TWBaseViewController : UIViewController

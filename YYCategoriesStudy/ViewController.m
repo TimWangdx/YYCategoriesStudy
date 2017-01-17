@@ -85,8 +85,15 @@
         model2.title = @"NSData 测试 - hash，加解密，编码";
         model2.className = @"TWNSDataViewController";
         
+        TWOptionModel *model3 = [[TWOptionModel alloc] init];
+        model3.title = @"NSDate 测试 - 日期元素，操作";
+        model3.className = @"TWNSDateViewController";
         
-        _options = @[model1,model2];
+        TWOptionModel *model4 = [[TWOptionModel alloc] init];
+        model4.title = @"NSDictionary 测试 - 转换，key，value";
+        model4.className = @"TWNSDictionaryViewController";
+        
+        _options = @[model1,model2,model3,model4];
     }
     return _options;
 }

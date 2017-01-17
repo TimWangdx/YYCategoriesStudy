@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Creates and returns an NSNumber object from a string.
  Valid format: @"12", @"12.345", @" -0xFF", @" .23e99 "...
- 
+ 数字的字符串解析成数字,包含16进制
  @param string  The string described an number.
  
  @return an NSNumber when parse succeed, or nil if an error occurs.

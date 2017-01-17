@@ -15,12 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `NSKeyedUnarchiver`.
+ 反序列化
  */
 @interface NSKeyedUnarchiver (YYAdd)
 
 /**
  Same as unarchiveObjectWithData:, except it returns the exception by reference.
- 
+ 根据nsdata 反序列化成对象
  @param data       The data need unarchived.
  
  @param exception  Pointer which will, upon return, if an exception occurred and
@@ -31,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Same as unarchiveObjectWithFile:, except it returns the exception by reference.
- 
+ 根据文件反序列化成对象
  @param path       The path of archived object file.
  
  @param exception  Pointer which will, upon return, if an exception occurred and

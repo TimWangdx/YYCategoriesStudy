@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  Posts a given notification to the receiver on main thread.
  If current thread is main thread, the notification is posted synchronized;
  otherwise, is posted asynchronized.
- 
+ 同步的在主线程发送通知
  @param notification  The notification to post.
                       An exception is raised if notification is nil.
  */
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Posts a given notification to the receiver on main thread.
- 
+ 在主线程发送通知，当前线程是否会阻塞 ，根据wait
  @param notification The notification to post.
                      An exception is raised if notification is nil.
  
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  Creates a notification with a given name and sender and posts it to the 
  receiver on main thread. If current thread is main thread, the notification 
  is posted synchronized; otherwise, is posted asynchronized.
- 
+ 可以包好发送通知的信息，包括发送通知的对象
  @param name    The name of the notification.
  
  @param object  The object posting the notification.
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  Creates a notification with a given name and sender and posts it to the
  receiver on main thread. If current thread is main thread, the notification
  is posted synchronized; otherwise, is posted asynchronized.
- 
+ 可以包好发送通知的信息，包括发送通知的对象，自定义的用户信息
  @param name      The name of the notification.
  
  @param object    The object posting the notification.
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Creates a notification with a given name and sender and posts it to the
  receiver on main thread.
- 
+ 可以包好发送通知的信息，包括发送通知的对象，自定义的用户信息，还可以选择当前线程是否阻塞
  @param name     The name of the notification.
  
  @param object   The object posting the notification.

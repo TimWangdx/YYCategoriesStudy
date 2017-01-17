@@ -21,12 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Sending messages with variable parameters
 ///=============================================================================
-/// @name Sending messages with variable parameters
+/// @name Sending messages with variable parameters 发送可变参数
 ///=============================================================================
 
 /**
  Sends a specified message to the receiver and returns the result of the message.
- 
+ 支持可变参数
  @param sel    A selector identifying the message to send. If the selector is
                NULL or unrecognized, an NSInvalidArgumentException is raised.
  
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Invokes a method of the receiver on the current thread using the default mode after a delay.
- 
+ 延迟执行
  @warning      It can't cancelled by previous request.
  
  @param sel    A selector identifying the message to send. If the selector is
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Invokes a method of the receiver on the main thread using the default mode.
- 
+ 在主线程里执行
  @param sel    A selector identifying the message to send. If the selector is
                NULL or unrecognized, an NSInvalidArgumentException is raised.
  
@@ -122,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Invokes a method of the receiver on the specified thread using the default mode.
- 
+ 在某个线程上执行
  @param sel    A selector identifying the message to send. If the selector is
                NULL or unrecognized, an NSInvalidArgumentException is raised.
  
@@ -158,7 +158,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Invokes a method of the receiver on a new background thread.
- 
+ 在后台线程执行
  @param sel    A selector identifying the message to send. If the selector is
                NULL or unrecognized, an NSInvalidArgumentException is raised.
  
@@ -208,12 +208,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Swap method (Swizzling)
 ///=============================================================================
-/// @name Swap method (Swizzling)
+/// @name Swap method (Swizzling) 黑魔法，iOS 的hook，方法交换
 ///=============================================================================
 
 /**
  Swap two instance method's implementation in one class. Dangerous, be careful.
- 
+ 交换实例方法
  @param originalSel   Selector 1.
  @param newSel        Selector 2.
  @return              YES if swizzling succeed; otherwise, NO.
@@ -222,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Swap two class method's implementation in one class. Dangerous, be careful.
- 
+ 交换类方法
  @param originalSel   Selector 1.
  @param newSel        Selector 2.
  @return              YES if swizzling succeed; otherwise, NO.
@@ -232,12 +232,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Associate value
 ///=============================================================================
-/// @name Associate value
+/// @name Associate value  关联value，动态增加属性
 ///=============================================================================
 
 /**
  Associate one object to `self`, as if it was a strong property (strong, nonatomic).
- 
+ 分装c方法，动态增加属性，默认是strong，nonatomic
  @param value   The object to associate.
  @param key     The pointer to get value from `self`.
  */
@@ -245,7 +245,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Associate one object to `self`, as if it was a weak property (week, nonatomic).
- 
+ 分装c方法，动态增加属性，默认是weak，nonatomic
  @param value  The object to associate.
  @param key    The pointer to get value from `self`.
  */
@@ -253,30 +253,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Get the associated value from `self`.
- 
+ get 方法，获取关联的值
  @param key The pointer to get value from `self`.
  */
 - (nullable id)getAssociatedValueForKey:(void *)key;
 
 /**
  Remove all associated values.
+ 移除关联的值
  */
 - (void)removeAssociatedValues;
 
 
 #pragma mark - Others
 ///=============================================================================
-/// @name Others
+/// @name Others 其它方法
 ///=============================================================================
 
 /**
  Returns the class name in NSString.
+ 获取类名，字符串格式，封装了c方法，类方法
  */
 + (NSString *)className;
 
 /**
  Returns the class name in NSString.
- 
+ 获取对象的类名，分装了c方法
  @discussion Apple has implemented this method in NSObject(NSLayoutConstraintCallsThis),
  but did not make it public.
  */
@@ -285,6 +287,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns a copy of the instance with `NSKeyedArchiver` and ``NSKeyedUnarchiver``.
  Returns nil if an error occurs.
+ 深拷贝，先序列化，再反序列化，就有一个新对象了，所有的值跟原来的对象是一样的
  */
 - (nullable id)deepCopy;
 

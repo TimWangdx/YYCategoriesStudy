@@ -15,13 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Observer with block (KVO).
+ kvo的扩展
  */
 @interface NSObject (YYAddForKVO)
 
 /**
  Registers a block to receive KVO notifications for the specified key-path 
  relative to the receiver.
- 
+ 增加观察者，通过block的方式回调
  @discussion The block and block captured objects are retained. Call
  `removeObserverBlocksForKeyPath:` or `removeObserverBlocks` to release.
  
@@ -37,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
  receiving change notifications for the property specified by a given key-path 
  relative to the receiver, and release these blocks.
- 
+ 移除kvo
  @param keyPath A key-path, relative to the receiver, for which blocks is 
  registered to receive KVO change notifications.
  */

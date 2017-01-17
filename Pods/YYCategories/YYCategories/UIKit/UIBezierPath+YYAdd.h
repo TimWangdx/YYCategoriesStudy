@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Creates and returns a new UIBezierPath object initialized with the text glyphs
  generated from the specified font.
+ 文字和字体来返回一个UIBezierPath
  
  @discussion It doesnot support apple emoji. If you want get emoji image, try
  [UIImage imageWithEmoji:size:] in `UIImage(YYAdd)`.

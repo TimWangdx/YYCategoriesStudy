@@ -20,6 +20,10 @@
 		EB94BB2B1E2DF48400EBDD1C /* TWNSDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB291E2DF48400EBDD1C /* TWNSDateViewController.xib */; };
 		EB94BB2F1E2DFD8700EBDD1C /* TWNSDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BB2D1E2DFD8700EBDD1C /* TWNSDictionaryViewController.m */; };
 		EB94BB301E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB2E1E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib */; };
+		EB94BB341E2E0B3300EBDD1C /* TWNSStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BB321E2E0B3300EBDD1C /* TWNSStringViewController.m */; };
+		EB94BB351E2E0B3300EBDD1C /* TWNSStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB331E2E0B3300EBDD1C /* TWNSStringViewController.xib */; };
+		EB94BB391E2E165100EBDD1C /* TWUIApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */; };
+		EB94BB3A1E2E165100EBDD1C /* TWUIApplicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */; };
 		EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9802181E13BCB50042D48E /* TWOptionModel.m */; };
 		EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98021C1E13BD8A0042D48E /* TWTestViewCell.m */; };
 		EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */; };
@@ -73,6 +77,12 @@
 		EB94BB2C1E2DFD8700EBDD1C /* TWNSDictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWNSDictionaryViewController.h; sourceTree = "<group>"; };
 		EB94BB2D1E2DFD8700EBDD1C /* TWNSDictionaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWNSDictionaryViewController.m; sourceTree = "<group>"; };
 		EB94BB2E1E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWNSDictionaryViewController.xib; sourceTree = "<group>"; };
+		EB94BB311E2E0B3300EBDD1C /* TWNSStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWNSStringViewController.h; sourceTree = "<group>"; };
+		EB94BB321E2E0B3300EBDD1C /* TWNSStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWNSStringViewController.m; sourceTree = "<group>"; };
+		EB94BB331E2E0B3300EBDD1C /* TWNSStringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWNSStringViewController.xib; sourceTree = "<group>"; };
+		EB94BB361E2E165100EBDD1C /* TWUIApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIApplicationViewController.h; sourceTree = "<group>"; };
+		EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIApplicationViewController.m; sourceTree = "<group>"; };
+		EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWUIApplicationViewController.xib; sourceTree = "<group>"; };
 		EB9802171E13BCB50042D48E /* TWOptionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOptionModel.h; sourceTree = "<group>"; };
 		EB9802181E13BCB50042D48E /* TWOptionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOptionModel.m; sourceTree = "<group>"; };
 		EB98021B1E13BD8A0042D48E /* TWTestViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTestViewCell.h; sourceTree = "<group>"; };
@@ -199,6 +209,12 @@
 		EB98021A1E13BCBF0042D48E /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EB94BB361E2E165100EBDD1C /* TWUIApplicationViewController.h */,
+				EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */,
+				EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */,
+				EB94BB311E2E0B3300EBDD1C /* TWNSStringViewController.h */,
+				EB94BB321E2E0B3300EBDD1C /* TWNSStringViewController.m */,
+				EB94BB331E2E0B3300EBDD1C /* TWNSStringViewController.xib */,
 				EB94BB2C1E2DFD8700EBDD1C /* TWNSDictionaryViewController.h */,
 				EB94BB2D1E2DFD8700EBDD1C /* TWNSDictionaryViewController.m */,
 				EB94BB2E1E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib */,
@@ -346,6 +362,8 @@
 				EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */,
 				EB94BB2B1E2DF48400EBDD1C /* TWNSDateViewController.xib in Resources */,
 				EBABE8911E14DA8B00B4C568 /* TWNSDataViewController.xib in Resources */,
+				EB94BB3A1E2E165100EBDD1C /* TWUIApplicationViewController.xib in Resources */,
+				EB94BB351E2E0B3300EBDD1C /* TWNSStringViewController.xib in Resources */,
 				EB94BB301E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib in Resources */,
 				EB9802251E13C2110042D48E /* TWCALayerViewController.xib in Resources */,
 				26BC72021E12B77E00013F58 /* Assets.xcassets in Resources */,
@@ -428,10 +446,12 @@
 				26BC71FA1E12B77E00013F58 /* AppDelegate.m in Sources */,
 				26BC71F71E12B77E00013F58 /* main.m in Sources */,
 				EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */,
+				EB94BB391E2E165100EBDD1C /* TWUIApplicationViewController.m in Sources */,
 				EBABE8901E14DA8B00B4C568 /* TWNSDataViewController.m in Sources */,
 				EB94BB2A1E2DF48400EBDD1C /* TWNSDateViewController.m in Sources */,
 				EBABE8941E14DBFA00B4C568 /* TWBaseViewController.m in Sources */,
 				EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */,
+				EB94BB341E2E0B3300EBDD1C /* TWNSStringViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

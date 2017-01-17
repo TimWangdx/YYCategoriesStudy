@@ -15,19 +15,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIControl`.
+ UIControl的扩展
  */
 @interface UIControl (YYAdd)
 
 /**
  Removes all targets and actions for a particular event (or events)
  from an internal dispatch table.
+ 移除所有的对象和action
  */
 - (void)removeAllTargets;
 
 /**
  Adds or replaces a target and action for a particular event (or events)
  to an internal dispatch table.
- 
+ 设置或者替换
  @param target         The target object—that is, the object to which the
                        action message is sent. If this is nil, the responder
                        chain is searched for an object willing to respond to the
@@ -43,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Adds a block for a particular event (or events) to an internal dispatch table.
  It will cause a strong reference to @a block.
- 
+ block 方式添加事件回调，强引用
  @param block          The block which is invoked then the action message is
                        sent  (cannot be nil). The block is retained.
  
@@ -55,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Adds or replaces a block for a particular event (or events) to an internal
  dispatch table. It will cause a strong reference to @a block.
- 
+ 增加或者替换
  @param block          The block which is invoked then the action message is
                        sent (cannot be nil). The block is retained.
  
@@ -67,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Removes all blocks for a particular event (or events) from an internal
  dispatch table.
- 
+ 移除所有的block方式的回调
  @param controlEvents  A bitmask specifying the control events for which the
                        action message is sent.
  */

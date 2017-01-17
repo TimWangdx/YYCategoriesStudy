@@ -93,7 +93,17 @@
         model4.title = @"NSDictionary 测试 - 转换，key，value";
         model4.className = @"TWNSDictionaryViewController";
         
-        _options = @[model1,model2,model3,model4];
+        TWOptionModel *model5 = [[TWOptionModel alloc] init];
+        model5.title = @"NSString 测试 - hash，加解密，编码";
+        model5.className = @"TWNSStringViewController";
+        
+        TWOptionModel *model6 = [[TWOptionModel alloc] init];
+        model6.title = @"UIApplication 测试 - 跟进程，程序本身相关的";
+        model6.className = @"TWUIApplicationViewController";
+        
+        
+        
+        _options = @[model1,model2,model3,model4,model5,model6];
     }
     return _options;
 }

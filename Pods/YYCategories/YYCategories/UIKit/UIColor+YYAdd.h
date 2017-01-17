@@ -74,7 +74,7 @@ extern void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
 
 #pragma mark - Create a UIColor Object
 ///=============================================================================
-/// @name Creating a UIColor Object
+/// @name Creating a UIColor Object     生成UIColor 对象
 ///=============================================================================
 
 /**
@@ -211,7 +211,7 @@ extern void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
 
 #pragma mark - Get color's description
 ///=============================================================================
-/// @name Get color's description
+/// @name Get color's description   UIColor 的描述信息
 ///=============================================================================
 
 /**
@@ -250,7 +250,7 @@ extern void YY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
 
 #pragma mark - Retrieving Color Information
 ///=============================================================================
-/// @name Retrieving Color Information
+/// @name Retrieving Color Information 返回UIColor 的一些信息
 ///=============================================================================
 
 /**

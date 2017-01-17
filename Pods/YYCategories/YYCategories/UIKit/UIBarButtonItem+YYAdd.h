@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIBarButtonItem`.
+ block 方式回调
  */
 @interface UIBarButtonItem (YYAdd)
 

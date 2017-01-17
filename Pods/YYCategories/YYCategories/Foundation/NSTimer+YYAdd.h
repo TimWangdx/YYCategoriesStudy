@@ -15,12 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `NSTimer`.
+ 定时器的扩展
  */
 @interface NSTimer (YYAdd)
 
 /**
  Creates and returns a new NSTimer object and schedules it on the current run 
  loop in the default mode.
+ block 方式，block在定时器里再回调给外面
  
  @discussion     After seconds seconds have elapsed, the timer fires, 
                  sending the message aSelector to target.
@@ -41,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates and returns a new NSTimer object initialized with the specified block.
- 
+ 生成一个定时器，没有自动加到runloop中，需要调用者自己加
  @discussion      You must add the new timer to a run loop, using addTimer:forMode:. 
                   Then, after seconds have elapsed, the timer fires, invoking
                   block. (If the timer is configured to repeat, there is no need

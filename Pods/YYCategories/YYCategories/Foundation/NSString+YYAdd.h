@@ -15,41 +15,48 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provide hash, encrypt, encode and some common method for 'NSString'.
+ 不可变字符串的分类，提供hash，加解密，编解码 和一些常用的方法
  */
 @interface NSString (YYAdd)
 
 #pragma mark - Hash
 ///=============================================================================
-/// @name Hash
+/// @name Hash   各种hash计算值
 ///=============================================================================
 
 /**
  Returns a lowercase NSString for md2 hash.
+ 返回md2
  */
 - (nullable NSString *)md2String;
 
 /**
  Returns a lowercase NSString for md4 hash.
+ 返回 md4
  */
 - (nullable NSString *)md4String;
 
 /**
  Returns a lowercase NSString for md5 hash.
+ 返回md5
  */
 - (nullable NSString *)md5String;
 
 /**
  Returns a lowercase NSString for sha1 hash.
+ 返回sha1
  */
 - (nullable NSString *)sha1String;
 
 /**
  Returns a lowercase NSString for sha224 hash.
+ 返回224
  */
 - (nullable NSString *)sha224String;
 
 /**
  Returns a lowercase NSString for sha256 hash.
+ 返回sha256
  */
 - (nullable NSString *)sha256String;
 
@@ -101,52 +108,61 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a lowercase NSString for crc32 hash.
+ 返回crc32
  */
 - (nullable NSString *)crc32String;
 
 
 #pragma mark - Encode and decode
 ///=============================================================================
-/// @name Encode and decode
+/// @name Encode and decode         编解码
 ///=============================================================================
 
 /**
  Returns an NSString for base64 encoded.
+ base64编码，先转成二进制，在编码
  */
 - (nullable NSString *)base64EncodedString;
 
 /**
  Returns an NSString from base64 encoded string.
  @param base64Encoding The encoded string.
+ 类方法，从base64 string 解码成NSString
  */
 + (nullable NSString *)stringWithBase64EncodedString:(NSString *)base64EncodedString;
 
 /**
  URL encode a string in utf-8.
  @return the encoded string.
+ url 地址进行编码，例如有中文
+ https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=99819353_hao_pg&wd=iso 8601 时间格式意思&oq=iso 8601 时间格式
+ 编码成:
+ https%3A//www.baidu.com/s?ie%3Dutf-8%26f%3D8%26rsv_bp%3D1%26tn%3D99819353_hao_pg%26wd%3Diso%208601%20%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E6%84%8F%E6%80%9D%26oq%3Diso%208601%20%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F
  */
 - (NSString *)stringByURLEncode;
 
 /**
  URL decode a string in utf-8.
  @return the decoded string.
+ url 地址进行解码，参考上一个参数
  */
 - (NSString *)stringByURLDecode;
 
 /**
  Escape commmon HTML to Entity.
  Example: "a<b" will be escape to "a&lt;b".
+ 字符串编码成html的什么什么编码
  */
 - (NSString *)stringByEscapingHTML;
 
 #pragma mark - Drawing
 ///=============================================================================
-/// @name Drawing
+/// @name Drawing       绘制
 ///=============================================================================
 
 /**
  Returns the size of the string if it were rendered with the specified constraints.
- 
+ 返回文字需要绘制的大小
  @param font          The font to use for computing the string size.
  
  @param size          The maximum acceptable size for the string. This value is
@@ -163,7 +179,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns the width of the string if it were to be rendered with the specified
  font on a single line.
- 
+ 返回文字的宽度
  @param font  The font to use for computing the string width.
  
  @return      The width of the resulting string's bounding box. These values may be
@@ -173,7 +189,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns the height of the string if it were rendered with the specified constraints.
- 
+ 返回文字的高度
  @param font   The font to use for computing the string size.
  
  @param width  The maximum acceptable width for the string. This value is used
@@ -187,12 +203,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Regular Expression
 ///=============================================================================
-/// @name Regular Expression
+/// @name Regular Expression    正则表达式
 ///=============================================================================
 
 /**
  Whether it can match the regular expression
- 
+ 判断字符串是否符合正则表达式的规则
  @param regex  The regular expression
  @param options     The matching options to report.
  @return YES if can match the regex; otherwise, NO.
@@ -201,7 +217,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Match the regular expression, and executes a given block using each object in the matches.
- 
+ 枚举符合正则的片段
  @param regex    The regular expression
  @param options  The matching options to report.
  @param block    The block to apply to elements in the array of matches.
@@ -219,7 +235,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a new string containing matching regular expressions replaced with the template string.
- 
+ 根据正则替换符合的部分
  @param regex       The regular expression
  @param options     The matching options to report.
  @param replacement The substitution template used when replacing matching instances.
@@ -233,7 +249,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - NSNumber Compatible
 ///=============================================================================
-/// @name NSNumber Compatible
+/// @name NSNumber Compatible       返回数字，想NSNumber 一样
 ///=============================================================================
 
 // Now you can use NSString as a NSNumber.
@@ -250,12 +266,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Utilities
 ///=============================================================================
-/// @name Utilities
+/// @name Utilities         工具类
 ///=============================================================================
 
 /**
  Returns a new UUID NSString
  e.g. "D1178E50-2A4D-4F1F-9BD3-F6AAB00E06B1"
+ 返回一个UUID
  */
 + (NSString *)stringWithUUID;
 
@@ -293,6 +310,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Trim blank characters (space and newline) in head and tail.
  @return the trimmed string.
+ 去掉头尾的换行和空格
  */
 - (NSString *)stringByTrim;
 
@@ -354,13 +372,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  nil, @"", @"  ", @"\n" will Returns NO; otherwise Returns YES.
+ 判断是否为空，nil,@"",@"   ",@"\n"
  */
 - (BOOL)isNotBlank;
 
 /**
  Returns YES if the target string is contained within the receiver.
  @param string A string to test the the receiver.
- 
+ 是否包含某个子串
  @discussion Apple has implemented this method in iOS8.
  */
 - (BOOL)containsString:(NSString *)string;
@@ -368,35 +387,40 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns YES if the target CharacterSet is contained within the receiver.
  @param set  A character set to test the the receiver.
+ 是否包含某个charaterset
  */
 - (BOOL)containsCharacterSet:(NSCharacterSet *)set;
 
 /**
  Try to parse this string and returns an `NSNumber`.
+ 字符串解析成NSNumber
  @return Returns an `NSNumber` if parse succeed, or nil if an error occurs.
  */
 - (NSNumber *)numberValue;
 
 /**
  Returns an NSData using UTF-8 encoding.
+ 返回utf-8编码的二进制
  */
 - (NSData *)dataValue;
 
 /**
  Returns NSMakeRange(0, self.length).
+ 返回整个字符串的range
  */
 - (NSRange)rangeOfAll;
 
 /**
  Returns an NSDictionary/NSArray which is decoded from receiver.
  Returns nil if an error occurs.
- 
+ json字符串解析成字典或者数组
  e.g. NSString: @"{"name":"a","count":2}"  => NSDictionary: @[@"name":@"a",@"count":@2]
  */
 - (id)jsonValueDecoded;
 
 /**
  Create a string from the file in main bundle (similar to [UIImage imageNamed:]).
+ 类似[UIImage imageNamed:]，从文件里生成字符串
  
  @param name The file name (in main bundle).
  

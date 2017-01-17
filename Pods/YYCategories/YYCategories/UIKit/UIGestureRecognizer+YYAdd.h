@@ -15,12 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIGestureRecognizer`.
+ 手势的分类
  */
 @interface UIGestureRecognizer (YYAdd)
 
 /**
  Initializes an allocated gesture-recognizer object with a action block.
- 
+ 以block形式创建block
  @param block  An action block that to handle the gesture recognized by the 
                receiver. nil is invalid. It is retained by the gesture.
  
@@ -32,13 +33,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Adds an action block to a gesture-recognizer object. It is retained by the 
  gesture.
- 
+ 添加block
  @param block A block invoked by the action message. nil is not a valid value.
  */
 - (void)addActionBlock:(void (^)(id sender))block;
 
 /**
  Remove all action blocks.
+ 移除block
  */
 - (void)removeAllActionBlocks;
 

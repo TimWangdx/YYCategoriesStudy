@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIFont`.
+ 字体UIFont 的扩展
  */
 @interface UIFont (YYAdd) <NSCoding>
 
@@ -25,39 +26,43 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Font Traits
 ///=============================================================================
 
-@property (nonatomic, readonly) BOOL isBold NS_AVAILABLE_IOS(7_0); ///< Whether the font is bold.
-@property (nonatomic, readonly) BOOL isItalic NS_AVAILABLE_IOS(7_0); ///< Whether the font is italic.
-@property (nonatomic, readonly) BOOL isMonoSpace NS_AVAILABLE_IOS(7_0); ///< Whether the font is mono space.
-@property (nonatomic, readonly) BOOL isColorGlyphs NS_AVAILABLE_IOS(7_0); ///< Whether the font is color glyphs (such as Emoji).
-@property (nonatomic, readonly) CGFloat fontWeight NS_AVAILABLE_IOS(7_0); ///< Font weight from -1.0 to 1.0. Regular weight is 0.0.
+@property (nonatomic, readonly) BOOL isBold NS_AVAILABLE_IOS(7_0); ///< Whether the font is bold.   粗体
+@property (nonatomic, readonly) BOOL isItalic NS_AVAILABLE_IOS(7_0); ///< Whether the font is italic.   斜体
+@property (nonatomic, readonly) BOOL isMonoSpace NS_AVAILABLE_IOS(7_0); ///< Whether the font is mono space.    等宽字体
+@property (nonatomic, readonly) BOOL isColorGlyphs NS_AVAILABLE_IOS(7_0); ///< Whether the font is color glyphs (such as Emoji).类似emoji
+@property (nonatomic, readonly) CGFloat fontWeight NS_AVAILABLE_IOS(7_0); ///< Font weight from -1.0 to 1.0. Regular weight is 0.0.字体浓淡
 
 /**
  Create a bold font from receiver.
  @return A bold font, or nil if failed.
+ 粗体
  */
 - (nullable UIFont *)fontWithBold NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a italic font from receiver.
  @return A italic font, or nil if failed.
+ 斜体
  */
 - (nullable UIFont *)fontWithItalic NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a bold and italic font from receiver.
  @return A bold and italic font, or nil if failed.
+ 粗体，斜体
  */
 - (nullable UIFont *)fontWithBoldItalic NS_AVAILABLE_IOS(7_0);
 
 /**
  Create a normal (no bold/italic/...) font from receiver.
  @return A normal font, or nil if failed.
+ 正常的字体
  */
 - (nullable UIFont *)fontWithNormal NS_AVAILABLE_IOS(7_0);
 
 #pragma mark - Create font
 ///=============================================================================
-/// @name Create font
+/// @name Create font   创建字体
 ///=============================================================================
 
 /**
@@ -88,27 +93,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Load and unload font
 ///=============================================================================
-/// @name Load and unload font
+/// @name Load and unload font  加载和卸载字体
 ///=============================================================================
 
 /**
  Load the font from file path. Support format:TTF,OTF.
  If return YES, font can be load use it PostScript Name: [UIFont fontWithName:...]
- 
+ 从文件里加载字体
  @param path    font file's full path
  */
 + (BOOL)loadFontFromPath:(NSString *)path;
 
 /**
  Unload font from file path.
- 
+ 卸载字体
  @param path    font file's full path
  */
 + (void)unloadFontFromPath:(NSString *)path;
 
 /**
  Load the font from data. Support format:TTF,OTF.
- 
+ 从二进制里加载字体
  @param data  Font data.
  
  @return UIFont object if load succeed, otherwise nil.
@@ -127,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Dump font data
 ///=============================================================================
-/// @name Dump font data
+/// @name Dump font data    
 ///=============================================================================
 
 /**

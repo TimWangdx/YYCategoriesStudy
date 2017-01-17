@@ -101,9 +101,12 @@
         model6.title = @"UIApplication 测试 - 跟进程，程序本身相关的";
         model6.className = @"TWUIApplicationViewController";
         
+        //TWUIImageViewController
+        TWOptionModel *model7 = [[TWOptionModel alloc] init];
+        model7.title = @"TWUIImageViewController 测试 - 图片变换";
+        model7.className = @"TWUIImageViewController";
         
-        
-        _options = @[model1,model2,model3,model4,model5,model6];
+        _options = @[model1,model2,model3,model4,model5,model6,model7];
     }
     return _options;
 }

@@ -16,19 +16,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Provide some commen method for `UIImage`.
  Image process is based on CoreGraphic and vImage.
+ 提供UIImage的常用方法
  */
 @interface UIImage (YYAdd)
 
 #pragma mark - Create image
 ///=============================================================================
-/// @name Create image
+/// @name Create image  创建image
 ///=============================================================================
 
 /**
  Create an animated image with GIF data. After created, you can access
  the images via property '.images'. If the data is not animated gif, this
  function is same as [UIImage imageWithData:data scale:scale];
- 
+ 动态图生成imahe
  @discussion     It has a better display performance, but costs more memory
                  (width * height * frames Bytes). It only suited to display small 
                  gif such as animated emoji. If you want to display large gif, 
@@ -44,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Whether the data is animated GIF.
- 
+ 判断图像数据是否是gif动态图
  @param data Image data
  
  @return Returns YES only if the data is gif and contains more than one frame,
@@ -54,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Whether the file in the specified path is GIF.
- 
+ 判断文件，是否是动态图
  @param path An absolute file path.
  
  @return Returns YES if the file is gif, otherwise returns NO.
@@ -63,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create an image from a PDF file data or path.
- 
+ 从 pdf 生成 图像
  @discussion If the PDF has multiple page, is just return's the first page's
  content. Image's scale is equal to current screen's scale, size is same as 
  PDF's origin size.
@@ -76,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create an image from a PDF file data or path.
- 
+ 从 pdf 生成 图像，可以设置图片的大小
  @discussion If the PDF has multiple page, is just return's the first page's
  content. Image's scale is equal to current screen's scale.
  
@@ -90,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create a square image from apple emoji.
- 
+ 从emoji 字符串生成图片，可以设置大小
  @discussion It creates a square image from apple emoji, image's scale is equal
  to current screen's scale. The original emoji image in `AppleColorEmoji` font 
  is in size 160*160 px.
@@ -105,14 +106,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create and return a 1x1 point size image with the given color.
- 
+ 颜色生成一个1*1大小的图片
  @param color  The color.
  */
 + (nullable UIImage *)imageWithColor:(UIColor *)color;
 
 /**
  Create and return a pure color image with the given color and size.
- 
+ 颜色生成一个图片，可以设置大小
  @param color  The color.
  @param size   New image's type.
  */
@@ -120,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create and return an image with custom draw code.
- 
+ 自定义block，可以自己绘制图形
  @param size      The image size.
  @param drawBlock The draw block.
  
@@ -130,24 +131,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Image Info
 ///=============================================================================
-/// @name Image Info
+/// @name Image Info    图片信息
 ///=============================================================================
 
 /**
- Whether this image has alpha channel.
+ Whether this image has alpha channel.  是否有alpha通道
  */
 - (BOOL)hasAlphaChannel;
 
 
 #pragma mark - Modify Image
 ///=============================================================================
-/// @name Modify Image
+/// @name Modify Image      修改图片，编辑图片
 ///=============================================================================
 
 /**
  Draws the entire image in the specified rectangle, content changed with
  the contentMode.
- 
+ 把自己绘制在某个矩形范围里
  @discussion This method draws the entire image in the current graphics context, 
  respecting the image's orientation setting. In the default coordinate system, 
  images are situated down and to the right of the origin of the specified 
@@ -165,7 +166,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns a new image which is scaled from this image.
  The image will be stretched as needed.
- 
+ 改变图片大小，宽和高
  @param size  The new size to be scaled, values should be positive.
  
  @return      The new image with the given size.
@@ -175,7 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns a new image which is scaled from this image.
  The image content will be changed with thencontentMode.
- 
+ 改变图片大小，宽和高，可以设置内容模式
  @param size        The new size to be scaled, values should be positive.
  
  @param contentMode The content mode for image content.
@@ -186,7 +187,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a new image which is cropped from this image.
- 
+ 不是太理解这个函数的作用，不会超过原始图片的大小
  @param rect  Image's inner rect.
  
  @return      The new image, or nil if an error occurs.
@@ -195,7 +196,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a new image which is edge inset from this image.
- 
+ 好像与视实际效果不太一样：原始<UIImage: 0x170092d90>, {960, 540} UIEdgeInsetsMake(10, 10, 10, 10)
+                    调用函数之后：<UIImage: 0x170094050>, {940, 520}
  @param insets  Inset (positive) for each of the edges, values can be negative to 'outset'.
  
  @param color   Extend edge's fill color, nil means clear color.

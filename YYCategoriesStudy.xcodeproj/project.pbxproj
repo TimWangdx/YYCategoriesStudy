@@ -24,6 +24,8 @@
 		EB94BB351E2E0B3300EBDD1C /* TWNSStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB331E2E0B3300EBDD1C /* TWNSStringViewController.xib */; };
 		EB94BB391E2E165100EBDD1C /* TWUIApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */; };
 		EB94BB3A1E2E165100EBDD1C /* TWUIApplicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */; };
+		EB94BB3E1E2E361400EBDD1C /* TWUIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BB3C1E2E361400EBDD1C /* TWUIImageViewController.m */; };
+		EB94BB3F1E2E361400EBDD1C /* TWUIImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BB3D1E2E361400EBDD1C /* TWUIImageViewController.xib */; };
 		EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9802181E13BCB50042D48E /* TWOptionModel.m */; };
 		EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98021C1E13BD8A0042D48E /* TWTestViewCell.m */; };
 		EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB98021D1E13BD8A0042D48E /* TWTestViewCell.xib */; };
@@ -83,6 +85,9 @@
 		EB94BB361E2E165100EBDD1C /* TWUIApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIApplicationViewController.h; sourceTree = "<group>"; };
 		EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIApplicationViewController.m; sourceTree = "<group>"; };
 		EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWUIApplicationViewController.xib; sourceTree = "<group>"; };
+		EB94BB3B1E2E361400EBDD1C /* TWUIImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIImageViewController.h; sourceTree = "<group>"; };
+		EB94BB3C1E2E361400EBDD1C /* TWUIImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImageViewController.m; sourceTree = "<group>"; };
+		EB94BB3D1E2E361400EBDD1C /* TWUIImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWUIImageViewController.xib; sourceTree = "<group>"; };
 		EB9802171E13BCB50042D48E /* TWOptionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOptionModel.h; sourceTree = "<group>"; };
 		EB9802181E13BCB50042D48E /* TWOptionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOptionModel.m; sourceTree = "<group>"; };
 		EB98021B1E13BD8A0042D48E /* TWTestViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTestViewCell.h; sourceTree = "<group>"; };
@@ -209,6 +214,9 @@
 		EB98021A1E13BCBF0042D48E /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EB94BB3B1E2E361400EBDD1C /* TWUIImageViewController.h */,
+				EB94BB3C1E2E361400EBDD1C /* TWUIImageViewController.m */,
+				EB94BB3D1E2E361400EBDD1C /* TWUIImageViewController.xib */,
 				EB94BB361E2E165100EBDD1C /* TWUIApplicationViewController.h */,
 				EB94BB371E2E165100EBDD1C /* TWUIApplicationViewController.m */,
 				EB94BB381E2E165100EBDD1C /* TWUIApplicationViewController.xib */,
@@ -362,6 +370,7 @@
 				EB98021F1E13BD8A0042D48E /* TWTestViewCell.xib in Resources */,
 				EB94BB2B1E2DF48400EBDD1C /* TWNSDateViewController.xib in Resources */,
 				EBABE8911E14DA8B00B4C568 /* TWNSDataViewController.xib in Resources */,
+				EB94BB3F1E2E361400EBDD1C /* TWUIImageViewController.xib in Resources */,
 				EB94BB3A1E2E165100EBDD1C /* TWUIApplicationViewController.xib in Resources */,
 				EB94BB351E2E0B3300EBDD1C /* TWNSStringViewController.xib in Resources */,
 				EB94BB301E2DFD8700EBDD1C /* TWNSDictionaryViewController.xib in Resources */,
@@ -448,6 +457,7 @@
 				EB98021E1E13BD8A0042D48E /* TWTestViewCell.m in Sources */,
 				EB94BB391E2E165100EBDD1C /* TWUIApplicationViewController.m in Sources */,
 				EBABE8901E14DA8B00B4C568 /* TWNSDataViewController.m in Sources */,
+				EB94BB3E1E2E361400EBDD1C /* TWUIImageViewController.m in Sources */,
 				EB94BB2A1E2DF48400EBDD1C /* TWNSDateViewController.m in Sources */,
 				EBABE8941E14DBFA00B4C568 /* TWBaseViewController.m in Sources */,
 				EB9802191E13BCB50042D48E /* TWOptionModel.m in Sources */,

@@ -187,7 +187,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a new image which is cropped from this image.
- 不是太理解这个函数的作用，不会超过原始图片的大小
+ 不是太理解这个函数的作用，不会超过原始图片的大小，莫非是裁剪的意思，裁剪成某个区域
  @param rect  Image's inner rect.
  
  @return      The new image, or nil if an error occurs.
@@ -208,7 +208,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Rounds a new image with a given corner size.
- 
+ 设置图片的圆角
  @param radius  The radius of each corner oval. Values larger than half the
  rectangle's width or height are clamped appropriately to half
  the width or height.
@@ -217,7 +217,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Rounds a new image with a given corner size.
- 
+ 设置图片的圆角,可以设置边界宽度和颜色，边界宽度会自动调整，会在图片边界内
  @param radius       The radius of each corner oval. Values larger than half the
                      rectangle's width or height are clamped appropriately to
                      half the width or height.
@@ -259,7 +259,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns a new rotated image (relative to the center).
- 
+ 逆时针方向旋转,fitSize 有不同效果
  @param radians   Rotated radians in counterclockwise.⟲
  
  @param fitSize   YES: new image's size is extend to fit all content.
@@ -270,74 +270,84 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns a new image rotated counterclockwise by a quarter‑turn (90°). ⤺
  The width and height will be exchanged.
+ 逆时针旋转90度，图片的宽高会发生变化
  */
 - (nullable UIImage *)imageByRotateLeft90;
 
 /**
  Returns a new image rotated clockwise by a quarter‑turn (90°). ⤼
  The width and height will be exchanged.
+ 顺时针旋转90度，图片的宽高会发生变化
  */
 - (nullable UIImage *)imageByRotateRight90;
 
 /**
  Returns a new image rotated 180° . ↻
+ 顺时针旋转180度
  */
 - (nullable UIImage *)imageByRotate180;
 
 /**
  Returns a vertically flipped image. ⥯
+ 上下颠倒
  */
 - (nullable UIImage *)imageByFlipVertical;
 
 /**
  Returns a horizontally flipped image. ⇋
+ 左右颠倒
  */
 - (nullable UIImage *)imageByFlipHorizontal;
 
 
 #pragma mark - Image Effect
 ///=============================================================================
-/// @name Image Effect
+/// @name Image Effect  图片效果
 ///=============================================================================
 
 /**
  Tint the image in alpha channel with the given color.
- 
+ 暂时不知道什么效果
  @param color  The color.
  */
 - (nullable UIImage *)imageByTintColor:(UIColor *)color;
 
 /**
  Returns a grayscaled image.
+ 变黑白照片
  */
 - (nullable UIImage *)imageByGrayscale;
 
 /**
  Applies a blur effect to this image. Suitable for blur any content.
+ 加上毛玻璃效果(基本上看不到原始图片)
  */
 - (nullable UIImage *)imageByBlurSoft;
 
 /**
  Applies a blur effect to this image. Suitable for blur any content except pure white.
  (same as iOS Control Panel)
+ 加上毛玻璃效果(基本上看不到原始图片)，不知道跟上面函数的区别
  */
 - (nullable UIImage *)imageByBlurLight;
 
 /**
  Applies a blur effect to this image. Suitable for displaying black text.
  (same as iOS Navigation Bar White)
+ 加上毛玻璃效果(基本上看不到原始图片),比较亮一点
  */
 - (nullable UIImage *)imageByBlurExtraLight;
 
 /**
  Applies a blur effect to this image. Suitable for displaying white text.
  (same as iOS Notification Center)
+ 加上毛玻璃效果(基本上看不到原始图片)，比较暗一点
  */
 - (nullable UIImage *)imageByBlurDark;
 
 /**
  Applies a blur and tint color to this image.
- 
+ 自定义颜色的模糊效果，毛玻璃效果
  @param tintColor  The tint color.
  */
 - (nullable UIImage *)imageByBlurWithTint:(UIColor *)tintColor;

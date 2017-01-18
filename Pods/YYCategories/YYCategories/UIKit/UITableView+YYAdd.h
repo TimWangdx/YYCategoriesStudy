@@ -15,12 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UITableView`.
+ UITableView 的分类
  */
 @interface UITableView (YYAdd)
 
 /**
  Perform a series of method calls that insert, delete, or select rows and
  sections of the receiver.
+ 暂不知怎么用
  
  @discussion Perform a series of method calls that insert, delete, or select
              rows and sections of the table. Call this method if you want
@@ -40,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Scrolls the receiver until a row or section location on the screen.
- 
+ 移动到某一行
  @discussion            Invoking this method does not cause the delegate to 
                         receive a scrollViewDidScroll: message, as is normal for 
                         programmatically-invoked user interface operations.
@@ -61,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Inserts a row in the receiver with an option to animate the insertion.
- 
+ 插入某一行
  @param row        Row index in section.
  
  @param section    Section index in table.
@@ -73,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Reloads the specified row using a certain animation effect.
- 
+ 重新加载某一行
  @param row        Row index in section.
  
  @param section    Section index in table.
@@ -89,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Deletes the row with an option to animate the deletion.
- 
+ 删除某一行
  @param row        Row index in section.
  
  @param section    Section index in table.
@@ -102,7 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Inserts the row in the receiver at the locations identified by the indexPath, 
  with an option to animate the insertion.
- 
+ 插入某一行
  @param indexPath  An NSIndexPath object representing a row index and section 
                    index that together identify a row in the table view.
  
@@ -113,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Reloads the specified row using a certain animation effect.
- 
+ 重新加载某一行
  @param indexPath  An NSIndexPath object representing a row index and section
                    index that together identify a row in the table view.
  
@@ -129,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Deletes the row specified by an array of index paths, 
  with an option to animate the deletion.
- 
+ 删除某一行
  @param indexPath  An NSIndexPath object representing a row index and section
                    index that together identify a row in the table view.
  
@@ -140,7 +142,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Inserts a section in the receiver, with an option to animate the insertion.
- 
+ 插入某一块
  @param section    An index specifies the section to insert in the receiving
                    table view. If a section already exists at the specified 
                    index location, it is moved down one index location.
@@ -152,7 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Deletes a section in the receiver, with an option to animate the deletion.
- 
+ 删除整块
  @param section    An index that specifies the sections to delete from the 
                    receiving table view. If a section exists after the specified
                    index location, it is moved up one index location.
@@ -164,7 +166,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Reloads the specified section using a given animation effect.
- 
+ 重新加载某一块
  @param section    An index identifying the section to reload.
  
  @param animation  A constant that indicates how the reloading is to be animated, 
@@ -178,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Unselect all rows in tableView.
- 
+ 清空选中的行
  @param animated YES to animate the transition, NO to make the transition immediate.
  */
 - (void)clearSelectedRowsAnimated:(BOOL)animated;

@@ -15,17 +15,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UITextField`.
+ UITextField 的扩展分类
  */
 @interface UITextField (YYAdd)
 
 /**
  Set all text selected.
+ 选中所有文字
  */
 - (void)selectAllText;
 
 /**
  Set text in range selected.
- 
+ 选中某个区域的文字
  @param range  The range of selected text in a document.
  */
 - (void)setSelectedRange:(NSRange)range;

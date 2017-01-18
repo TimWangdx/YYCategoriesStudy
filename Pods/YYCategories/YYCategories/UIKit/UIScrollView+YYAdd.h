@@ -15,26 +15,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIScrollView`.
+ UIScrollView 的扩展分类
  */
 @interface UIScrollView (YYAdd)
 
 /**
  Scroll content to top with animation.
+ 移到顶部，有动画
  */
 - (void)scrollToTop;
 
 /**
  Scroll content to bottom with animation.
+ 移到地步，有动画
  */
 - (void)scrollToBottom;
 
 /**
  Scroll content to left with animation.
+ 移到左部，有动画
  */
 - (void)scrollToLeft;
 
 /**
  Scroll content to right with animation.
+ 移到右边，有动画
  */
 - (void)scrollToRight;
 

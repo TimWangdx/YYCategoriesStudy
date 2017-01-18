@@ -15,19 +15,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIScreen`.
+ 屏幕分类
  */
 @interface UIScreen (YYAdd)
 
 /**
  Main screen's scale
- 
+ 屏幕的scale
  @return screen's scale
  */
 + (CGFloat)screenScale;
 
 /**
  Returns the bounds of the screen for the current device orientation.
- 
+ 当前屏幕的尺寸
  @return A rect indicating the bounds of the screen.
  @see    boundsForOrientation:
  */
@@ -37,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the bounds of the screen for a given device orientation.
  `UIScreen`'s `bounds` method always returns the bounds of the
  screen of it in the portrait orientation.
- 
+ 任意方向的屏幕尺寸
  @param orientation  The orientation to get the screen's bounds.
  @return A rect indicating the bounds of the screen.
  @see  currentBounds
@@ -47,6 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The screen's real size in pixel (width is always smaller than height).
  This value may not be very accurate in an unknown device, or simulator.
+ 实际像素
  e.g. (768,1024)
  */
 @property (nonatomic, readonly) CGSize sizeInPixel;
@@ -54,6 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The screen's PPI.
  This value may not be very accurate in an unknown device, or simulator.
+ PPi
  Default value is 96.
  */
 @property (nonatomic, readonly) CGFloat pixelsPerInch;

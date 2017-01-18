@@ -15,11 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Provides extensions for `UIView`.
+ UIView 的扩展
  */
 @interface UIView (YYAdd)
 
 /**
  Create a snapshot image of the complete view hierarchy.
+ 截取某个view 为 图片，截屏
  */
 - (nullable UIImage *)snapshotImage;
 
@@ -32,12 +34,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Create a snapshot PDF of the complete view hierarchy.
+ 截屏为pdf
  */
 - (nullable NSData *)snapshotPDF;
 
 /**
  Shortcut to set the view.layer's shadow
- 
+ 快捷设置阴影
  @param color  Shadow Color
  @param offset Shadow offset
  @param radius Shadow radius
@@ -46,13 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Remove all subviews.
- 
+ 移除所有的子view
  @warning Never call this method inside your view's drawRect: method.
  */
 - (void)removeAllSubviews;
 
 /**
  Returns the view's view controller (may be nil).
+ 返回view'的控制器，可能是nil
  */
 @property (nullable, nonatomic, readonly) UIViewController *viewController;
 
@@ -63,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Converts a point from the receiver's coordinate system to that of the specified view or window.
- 
+ 从自己的坐标系的点转换成目标view的坐标系的点
  @param point A point specified in the local coordinate system (bounds) of the receiver.
  @param view  The view or window into whose coordinate system point is to be converted. 
     If view is nil, this method instead converts to window base coordinates.
@@ -73,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Converts a point from the coordinate system of a given view or window to that of the receiver.
- 
+ 从目标坐标系的点转换为自己坐标系的点
  @param point A point specified in the local coordinate system (bounds) of view.
  @param view  The view or window with point in its coordinate system. 
     If view is nil, this method instead converts from window base coordinates.
@@ -83,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Converts a rectangle from the receiver's coordinate system to that of another view or window.
- 
+ 从自己的坐标系的矩形转换成目标view的坐标系的矩形
  @param rect A rectangle specified in the local coordinate system (bounds) of the receiver.
  @param view The view or window that is the target of the conversion operation. If view is nil, this method instead converts to window base coordinates.
  @return The converted rectangle.
@@ -92,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Converts a rectangle from the coordinate system of another view or window to that of the receiver.
- 
+ 从目标坐标系的矩形转换为自己坐标系的矩形
  @param rect A rectangle specified in the local coordinate system (bounds) of view.
  @param view The view or window with rect in its coordinate system.
     If view is nil, this method instead converts from window base coordinates.
@@ -100,7 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGRect)convertRect:(CGRect)rect fromViewOrWindow:(nullable UIView *)view;
 
-
+// 快捷的属性
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
 @property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
